@@ -4,7 +4,7 @@ main {
     margin-top: 70px;
     background-color: white;
 }
-.my-photo ul {
+.my-favorite ul {
     overflow: hidden;
     padding: 0;
     list-style: none;
@@ -13,7 +13,7 @@ main {
     border-width: 1px; 
     border-radius: 5px;
 }
-.my-photo li:nth-child(1) {
+.my-favorite li:nth-child(1) {
     color: white;
     font-weight: bold;
     border-bottom-width: 1px;
@@ -40,10 +40,12 @@ main {
     border-bottom-width: 0;
 }*/
 .show-pic {
+    width: 26%;
+    overflow: hidden;
     float: left;
 }
 .description {
-    width: 75%; /*如果不设置的话，无法和前面的图片处在同一行*/
+    width: 70%; /*如果不设置的话，无法和前面的图片处在同一行*/
     float: left;
 }
 .description-title {
@@ -82,8 +84,10 @@ main {
     border-width: 1px; 
     border-radius: 2px;
 }
+.modify-btn {
+    display: none;
+}
 .delete-btn {
-    margin-left: 10px;
 }
 .modify-btn:hover, .delete-btn:hover {
     background-color: green;

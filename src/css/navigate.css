@@ -36,6 +36,8 @@ main {
     border-width: 1px; 
     background-color: initial; 
     padding: 50px;
+    padding-left: 20px;
+    padding-right: 0px;
 }
 .filter-table {
     background-color: white; 
