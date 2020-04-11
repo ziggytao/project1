@@ -86,3 +86,7 @@ form textarea {
   margin: 0 auto;
   margin-top: 20px;
 }
+main form a {
+	text-decoration: none;
+	color: white;
+}

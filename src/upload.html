@@ -47,7 +47,9 @@
 					<input type="text" name="img-country">
 					<label>City:</label>
 					<input type="text" name="img-city">
-					<button class="submit-btn" onclick="alert('上传成功 ')">Submit</button>
+					<a href="my-photo.html">
+					<input type="button" name="submit" value="Submit" class="submit-btn" onclick="alert('上传成功')">
+					</a>
 				</form>
 			</li>
 		</ul>
@@ -55,7 +57,7 @@
 	<footer>
 		<span>Copyright &copy 2019-2021 Web Foundamental. All Rights Reserved. 备案号：沪FD16307110469</span>
 	</footer>
-	<script>   
+	<script>  
 		$("#upload-file").change(
 			function(){  
 				var objUrl = getObjectURL(this.files[0]) ;//获取文件信息  
