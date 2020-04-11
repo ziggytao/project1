@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="src/signin.css">
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function hello(){
+			window.location.href="src/home.html"
+		}
+	</script>
+
+</head>
+<body>
+	
+	<h1>欢迎!</h1>
+	<form>
+		<fieldset>
+			<label>用户名/邮箱：</label><br>
+			<input type="text" name="user_name" required="required">
+			<label>密码：</label><br>
+			<input type="password" name="user_password" required="required">
+			<input type="button" name="signin" value="登录" onclick="hello()" class="btn">
+		</fieldset>
+	</form>
+
+	<p>还没有账号？<a href="src/sign_up.html">马上注册吧！</a></p>
+
+	<footer>
+		<span>Copyright &copy 2019-2021 Web Foundamental. All Rights Reserved. 备案号：沪FD16307110469</span>
+	</footer>
+
+</body>
+</html>

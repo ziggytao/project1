@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>注册账号</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="signin.css">
+
+	<script type="text/javascript">
+	function signin(){
+		window.location.href="../index.html"
+		alert('注册成功，请登录')
+	}
+	</script>
+</head>
+<body>
+	<h1>注册账号</h1>
+	<form>
+		<fieldset class="signup">
+			<label>用户名：</label>
+			<input type="text" name="user_name">
+			<label>邮箱：</label>
+			<input type="text" name="user_email">
+			<label>密码：</label>
+			<input type="password" name="user_password">
+			<label>确认密码：</label>
+			<input type="password" name="re_password">
+			<a href="../index.html">
+				<input type="button" class="sign_up_btn" name="signup" 
+					value="注册" onclick="alert('注册成功，请登录')">
+			</a>
+		</fieldset>
+	</form>
+
+	<p><a href="../index.html">返回</a></p>
+
+	<footer>
+		<span>Copyright &copy 2019-2021 Web Foundamental. All Rights Reserved. 备案号：沪FD16307110469</span>
+	</footer>
+
+</body>
+</html>

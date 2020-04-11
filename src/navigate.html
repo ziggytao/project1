@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>浏览</title>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
+	<link rel="stylesheet" type="text/css" href="nav.css">
+	<link rel="stylesheet" type="text/css" href="navigate.css">
+	<script type="text/javascript">
+		var city = [
+		['Shanghai','Kunming','Beijing','Yantai'],
+		['Tokyo', 'Osaka', 'Kamakura'],
+		['Roma','Milan','Venice','Florence'],
+		['New York','San Francisco', 'Washington']
+		];
+
+		function getCity(){
+     var selectCountry=document.select.country;
+     var selectCity=document.select.city;     
+     var countryCity=city[selectCountry.selectedIndex - 1];
+
+     selectCity.length=1;
+
+     for(var i=0;i<countryCity.length;i++){
+       selectCity[i+1]=new Option(countryCity[i],countryCity[i]);
+     }
+   }
+	</script>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="home.html">HOME</a></li>
+				<li><a href="navigate.html" class="active">NAV</a></li>
+				<li><a href="search.html">SEARCH</a></li>
+				<div class="dropdown">
+    			<a href="#" class="dropbtn">MY ACCOUNT</a>
+					<div class="dropdown-content">
+						<img src="../img/icon-upload.png">
+						<a href="upload.html">Upload</a>
+						<img src="../img/icon-photo.png">
+  					<a href="my-photo.html">My Photo</a>
+  					<img src="../img/icon-favorite.png">
+  					<a href="my-favorite.html">My Favorite</a>
+  					<img src="../img/icon-signin.png">
+  					<a href="../index.html">Sign in</a>
+					</div>
+				</div>
+			</ul>
+		</nav>
+	</header>
+	
+	<aside>
+		<div>
+			<table class="search-by-title" >
+				<tr>
+					<td class="aside-td first-td">
+						<div>Fliter by Title</div>	
+					</td>
+				</tr>
+				<tr>
+					<td class="search-td">
+						<!-- <form class="search-form"> -->
+						<input class="img-name" type="text" name="img-name">
+						<input class="search-button"type="button" name="search-by-title" value="SEARCH" onclick="alert('Search')">
+						<!-- </form> -->
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<table class="hot-content">
+				<tr>
+					<td class="aside-td first-td">
+						<div>Hot Contents</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="aside-td">
+						<div>
+							<a href="" onclick="alert('click')">Scenery</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="aside-td">
+						<div><a href="" onclick="alert('click')">City</a></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="aside-td">
+						<div><a href="" onclick="alert('click')">Person</a></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="aside-td last-td">
+						<div><a href="" onclick="alert('click')">Buliding</a></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<table class="hot-country">
+				<tr>
+					<td class="aside-td first-td">
+						<div>Hot Countries</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="aside-td">
+						<div><a href="" onclick="alert('click')">China</a></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="aside-td">
+						<div><a href="" onclick="alert('click')">Italy</a></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="aside-td">
+						<div><a href="" onclick="alert('click')">Japan</a></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="aside-td last-td">
+						<div><a href="" onclick="alert('click')">America</a></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<table class="hot-city">
+				<tr>
+					<td class="aside-td first-td">
+						<div>Hot Cities</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="aside-td">
+						<div><a href="" onclick="alert('click')">Shanghai</a></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="aside-td">
+						<div><a href="" onclick="alert('click')">Chengdu</a></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="aside-td last-td">
+						<div><a href="" onclick="alert('click')">New York</a></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</aside>
+	<main>
+		<table class="filter-table">
+			<tr>
+				<td class="filter-title">
+					<div>Filter</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="filter-td">
+					<form name="select">
+					<select name="content">
+						<option>Filter by Content</option>
+						<option>Scenery</option>
+						<option>City</option>
+						<option>Person</option>
+						<option>Building</option>
+					</select>
+					<select name="country" onchange="getCity()">
+						<option>Filter by Country</option>
+						<option value="China">China</option>
+						<option value="Japan">Japan</option>
+						<option value="Italy">Italy</option>
+						<option value="America">America</option>
+					</select>
+					<select name="city">
+						<option>Filter by city</option>
+					</select>
+					
+					<input class="filter-button" type="button" name="filter-button" value="Filter" onclick="alert('Filter')">
+				</form>
+				</td>
+			</tr>
+			<tr id="content-tr">
+				<td>
+					<table class="content-table">
+						<tr>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+				
+							</td>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+							</td>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+							</td>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+							</td>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+							</td>
+			
+						</tr>
+						<tr>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+								
+							</td>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+							</td>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+							</td>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+							</td>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+				
+							</td>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+							</td>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+							</td>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+							</td>
+							<td>
+								<a href="pic_details.html">
+									<img class="small" src="../img/normal/medium/5855191275.jpg">
+								</a>
+								<div class="description">
+									<p><strong>Title</strong></p>
+									<p>This is a picture.</p>
+								</div>
+							</td>
+			
+						</tr>
+					</table>
+				</td>					
+			</tr>
+			<tr>
+				<td>
+					<div class="pagenumber" style="text-align: center;"> 
+						<a href="">&lt&lt</a>
+						<a href="" class="active-page">1</a>
+						<a href="">2</a>
+						<a href="">3</a>
+						<a href="">4</a>
+						<a href="">5</a>
+						<a href="">&gt&gt</a>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</main>
+	<footer>
+		<span>Copyright &copy 2019-2021 Web Foundamental. All Rights Reserved. 备案号：沪FD16307110469</span>
+	</footer>
+</body>
+</html>

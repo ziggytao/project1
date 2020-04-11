@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>upload</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="nav.css">
+	<link rel="stylesheet" type="text/css" href="upload.css">
+	<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script> 
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="home.html">HOME</a></li>
+				<li><a href="navigate.html">NAV</a></li>
+				<li><a href="search.html">SEARCH</a></li>
+				<div class="dropdown">
+    			<a href="#" class="dropbtn">MY ACCOUNT</a>
+					<div class="dropdown-content">
+						<img src="../img/icon-upload.png">
+						<a href="upload.html">Upload</a>
+						<img src="../img/icon-photo.png">
+  					<a href="my-photo.html">My Photo</a>
+  					<img src="../img/icon-favorite.png">
+  					<a href="my-favorite.html">My Favorite</a>
+  					<img src="../img/icon-signin.png">
+  					<a href="../index.html">Sign in</a>
+					</div>
+				</div>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<ul>
+			<li>
+				<span>Upload</span>
+			</li>
+			<li>
+				<input type="file" name="upload-file" id="upload-file">	
+				<img src="" id="img0">	
+				<form>	
+					<label>Title:</label>
+					<input type="text" name="img-title">
+					<label>Description:</label>
+					<textarea class="img-description"></textarea>
+					<label>Country:</label>
+					<input type="text" name="img-country">
+					<label>City:</label>
+					<input type="text" name="img-city">
+					<button class="submit-btn" onclick="alert('上传成功 ')">Submit</button>
+				</form>
+			</li>
+		</ul>
+	</main>
+	<footer>
+		<span>Copyright &copy 2019-2021 Web Foundamental. All Rights Reserved. 备案号：沪FD16307110469</span>
+	</footer>
+	<script>   
+		$("#upload-file").change(
+			function(){  
+				var objUrl = getObjectURL(this.files[0]) ;//获取文件信息  
+				console.log("objUrl = "+objUrl);  
+			  if (objUrl) {  
+			  $("#img0").attr("src", objUrl);  
+				}   
+			}
+		);  
+		function getObjectURL(file) {  
+			var url = null;   
+			if (window.createObjectURL!=undefined) {  
+			url = window.createObjectURL(file) ;  
+			} else if (window.URL!=undefined) { // mozilla(firefox)  
+		  	url = window.URL.createObjectURL(file) ;  
+			} else if (window.webkitURL!=undefined) { // webkit or chrome  
+			  url = window.webkitURL.createObjectURL(file) ;  
+			}  
+			return url;  
+		}  
+	</script>  
+</body>
+</html>
